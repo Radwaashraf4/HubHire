@@ -9,6 +9,10 @@ A responsive recruitment website built using HTML, CSS, and Bootstrap.
 - Contact Form
 - Services Page
 - Job Listings
+##Project Preview
+![hubhire preview](HireHub_preview1.png)
+
+![hubhire preview](HireHub_preview2.png)
 
 ## Technologies
 
