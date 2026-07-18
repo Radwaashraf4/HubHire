@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jobs | HubHire</title>
   <link rel="stylesheet" href="jobs.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,7 +13,7 @@
   <nav class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <img src="logo.jpeg" alt="Mosla Pioneers Logo">
+        <img src="logo.jpeg" alt="Mosla Pioneers Logo" />
         <span>HubHire</span>
       </div>
       <ul class="nav-links">
@@ -32,20 +32,123 @@
   <section class="jobs-section animate-fade-in">
     <div class="container">
       <h1>Job Openings</h1>
+      
+      <!-- Job Filters -->
+      <div class="job-filters">
+        <input type="text" id="jobSearch" placeholder="🔍 Search jobs by title or description..." />
+        <div class="job-categories">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="sales">Sales</button>
+          <button class="category-btn" data-category="hr">HR</button>
+          <button class="category-btn" data-category="marketing">Marketing</button>
+          <button class="category-btn" data-category="technology">Technology</button>
+          <button class="category-btn" data-category="design">Design</button>
+        </div>
+      </div>
+
+      <!-- Job Listings -->
       <div class="job-list">
-        <div class="job-card">
+        <div class="job-card" data-category="sales">
+          <div class="job-badge">Full-Time</div>
           <h3>Sales Representative</h3>
-          <p>Opportunity to work with leading companies in direct sales and customer service.</p>
+          <p class="job-location">📍 Cairo, Egypt</p>
+          <p class="job-description">Opportunity to work with leading companies in direct sales and customer service. Build relationships and drive revenue growth.</p>
+          <div class="job-meta">
+            <span>💰 $800 - $1200/month</span>
+            <span>📅 Posted 2 days ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
         </div>
-        <div class="job-card">
+
+        <div class="job-card" data-category="hr">
+          <div class="job-badge">Full-Time</div>
           <h3>HR Specialist</h3>
-          <p>Join a specialized team focused on recruitment and human resource development.</p>
+          <p class="job-location">📍 Alexandria, Egypt</p>
+          <p class="job-description">Join a specialized team focused on recruitment and human resource development. Manage talent acquisition and employee relations.</p>
+          <div class="job-meta">
+            <span>💰 $700 - $1000/month</span>
+            <span>📅 Posted 3 days ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
         </div>
-        <div class="job-card">
+
+        <div class="job-card" data-category="marketing">
+          <div class="job-badge">Full-Time</div>
           <h3>Digital Marketing Manager</h3>
-          <p>Lead innovative online marketing campaigns and analyze data to develop the brand.</p>
+          <p class="job-location">📍 Remote</p>
+          <p class="job-description">Lead innovative online marketing campaigns and analyze data to develop the brand. SEO, SEM, and social media expertise required.</p>
+          <div class="job-meta">
+            <span>💰 $1000 - $1500/month</span>
+            <span>📅 Posted 1 day ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
         </div>
-        <!-- ✏️ أضف وظائف إضافية هنا -->
+
+        <div class="job-card" data-category="technology">
+          <div class="job-badge">Full-Time</div>
+          <h3>Software Engineer</h3>
+          <p class="job-location">📍 Hybrid - Cairo</p>
+          <p class="job-description">Build cutting-edge web applications using modern technologies like React, Node.js, and MongoDB. Join an agile development team.</p>
+          <div class="job-meta">
+            <span>💰 $1200 - $1800/month</span>
+            <span>📅 Posted 5 days ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
+        </div>
+
+        <div class="job-card" data-category="design">
+          <div class="job-badge">Part-Time</div>
+          <h3>UI/UX Designer</h3>
+          <p class="job-location">📍 Remote</p>
+          <p class="job-description">Create beautiful, user-friendly interfaces for web and mobile applications. Strong portfolio in UI/UX design required.</p>
+          <div class="job-meta">
+            <span>💰 $600 - $900/month</span>
+            <span>📅 Posted 1 week ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
+        </div>
+
+        <div class="job-card" data-category="marketing">
+          <div class="job-badge">Full-Time</div>
+          <h3>Content Writer</h3>
+          <p class="job-location">📍 Cairo, Egypt</p>
+          <p class="job-description">Create engaging content for blogs, social media, and marketing materials. Excellent writing and research skills required.</p>
+          <div class="job-meta">
+            <span>💰 $500 - $800/month</span>
+            <span>📅 Posted 2 weeks ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
+        </div>
+
+        <div class="job-card" data-category="sales">
+          <div class="job-badge">Full-Time</div>
+          <h3>Account Manager</h3>
+          <p class="job-location">📍 Alexandria, Egypt</p>
+          <p class="job-description">Manage key client accounts and develop long-term relationships. Experience in B2B sales and account management required.</p>
+          <div class="job-meta">
+            <span>💰 $900 - $1300/month</span>
+            <span>📅 Posted 4 days ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
+        </div>
+
+        <div class="job-card" data-category="technology">
+          <div class="job-badge">Internship</div>
+          <h3>Frontend Developer Intern</h3>
+          <p class="job-location">📍 Hybrid - Alexandria</p>
+          <p class="job-description">Learn and grow as a frontend developer working on real-world projects. HTML, CSS, and JavaScript knowledge required.</p>
+          <div class="job-meta">
+            <span>💰 $300 - $500/month</span>
+            <span>📅 Posted 1 week ago</span>
+          </div>
+          <a href="#" class="btn-apply">Apply Now →</a>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noJobsMessage" style="display: none; text-align: center; padding: 40px;">
+        <p style="font-size: 1.2rem; color: #666;">No jobs found matching your search.</p>
+        <p style="color: #999;">Try adjusting your filters or search terms.</p>
       </div>
     </div>
   </section>

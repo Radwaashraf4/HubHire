@@ -6,6 +6,7 @@
   <title>Home | HubHire</title>
   <link rel="stylesheet" href="main.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
@@ -13,11 +14,16 @@
   <nav class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <img src="logo.jpeg" alt="Mosla Pioneers Logo" class="logo-img">
+        <img src="logo.jpeg" alt="Mosla Pioneers Logo" class="logo-img" />
         <span>HubHire</span>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="jobs.html">Jobs</a></li>
@@ -30,17 +36,194 @@
 
   <!-- Hero Section -->
   <header class="hero-section animate-fade-in">
-    <div class="container">
-      <h1>Welcome to HubHire</h1>
-      <p>Your gateway to a better career, powered by Mosla Pioneers.</p>
-      <a href="about.html" class="cta-btn">Explore Our agency</a>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">🚀 Leading Recruitment Agency</span>
+        <h1>Welcome to <span class="highlight">HubHire</span></h1>
+        <p>Your gateway to a better career, powered by <strong>Mosla Pioneers</strong>. We connect talented professionals with their dream jobs.</p>
+        <div class="hero-buttons">
+          <a href="about.html" class="cta-btn primary">Explore Our Agency <i class="fas fa-arrow-right"></i></a>
+          <a href="jobs.html" class="cta-btn secondary">View Jobs <i class="fas fa-briefcase"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Jobs Filled</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Success Rate</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/500x400/1c64f2/ffffff?text=HubHire" alt="HubHire Illustration" />
+      </div>
     </div>
   </header>
 
+  <!-- Features Section -->
+  <section class="features-section animate-fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose <span class="highlight">HubHire</span></h2>
+        <p>We provide comprehensive recruitment solutions tailored to your needs</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Expert Recruiters</h3>
+          <p>Our team of experienced recruiters understands your industry inside out.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Fast Placement</h3>
+          <p>We streamline the hiring process to find you the right talent quickly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Personalized Service</h3>
+          <p>We take time to understand your unique requirements and culture.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Global Network</h3>
+          <p>Access a vast network of professionals from around the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section animate-fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our <span class="highlight">Clients Say</span></h2>
+        <p>Real testimonials from people who found their dream jobs through HubHire</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"HubHire helped me find my dream job in just two weeks! The team was professional and supportive throughout the process."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=JD" alt="John Doe" />
+            <div>
+              <h4>John Doe</h4>
+              <span>Software Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Outstanding service! The recruiters at HubHire truly care about matching the right talent with the right company."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=SM" alt="Sarah Mitchell" />
+            <div>
+              <h4>Sarah Mitchell</h4>
+              <span>HR Manager</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I've used many recruitment agencies, but HubHire stands out for their dedication and personalized approach."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=AK" alt="Ahmed Khaled" />
+            <div>
+              <h4>Ahmed Khaled</h4>
+              <span>Marketing Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section animate-fade-in">
+    <div class="container cta-container">
+      <h2>Ready to Take the Next Step?</h2>
+      <p>Join thousands of successful candidates who found their dream jobs through HubHire</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="cta-btn primary">Get Started <i class="fas fa-arrow-right"></i></a>
+        <a href="jobs.html" class="cta-btn secondary">Browse Jobs <i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Mosla Pioneers. All rights reserved.</p>
+    <div class="container footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HubHire</h3>
+          <p>Your gateway to a better career, powered by Mosla Pioneers.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+            <li><i class="fas fa-phone"></i> +20 123 456 789</li>
+            <li><i class="fas fa-envelope"></i> info@hubhire.com</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get job alerts</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mosla Pioneers. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

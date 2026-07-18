@@ -1,20 +1,41 @@
-// scripts/about.js
+// ===== Mobile Menu =====
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hero = document.querySelector(".hero");
-  const fadeSections = document.querySelectorAll(".fade-in, .slide-in");
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-visible");
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-
-  fadeSections.forEach(section => {
-    observer.observe(section);
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
   });
 });
+
+// ===== Navbar Scroll Effect =====
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// ===== Number Animation (Achievements) =====
+const animateNumbers = () => {
+  const numbers = document.querySelectorAll('.achievement-number');
+  
+  numbers.forEach(number => {
+    const target = parseInt(number.dataset.target);
+    let current = 0;
+    const increment = Math.ceil(target / 60);
+    const suffix = target >= 1000 ? '+' : '%';
+    
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        number.textContent = target + (target >= 1000 ? '+' : '%');
+        clear

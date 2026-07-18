@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | HubHire</title>
   <link rel="stylesheet" href="services.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <img src="logo.jpeg" alt="Mosla Pioneers Logo">
+        <img src="logo.jpeg" alt="Mosla Pioneers Logo" class="logo-img" />
         <span>HubHire</span>
       </div>
-      <ul class="nav-links">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html" class="active">Services</a></li>
@@ -28,32 +33,303 @@
     </div>
   </nav>
 
-  <!-- Services Section -->
-  <section class="services-section animate-fade-in">
+  <!-- Services Hero Section -->
+  <section class="services-hero animate-fade-in">
     <div class="container">
-      <h1>Our Services</h1>
-      <div class="cards">
-        <div class="card">
+      <div class="services-hero-content">
+        <span class="services-badge"><i class="fas fa-cogs"></i> Our Services</span>
+        <h1>Comprehensive <span class="highlight">Recruitment</span> Solutions</h1>
+        <p>We offer a wide range of recruitment and training services designed to connect talented professionals with their dream careers and help organizations build exceptional teams.</p>
+        <div class="services-meta">
+          <span><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</span>
+          <span><i class="fas fa-check-circle"></i> Expert Team</span>
+          <span><i class="fas fa-check-circle"></i> Fast Turnaround</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="services-grid-section animate-fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>What We <span class="highlight">Offer</span></h2>
+        <p>Tailored recruitment and training services for every need</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
           <h3>Mass Recruitment</h3>
-          <p>Efficient recruitment days that meet your business needs fast.</p>
+          <p>Efficient recruitment days that meet your business needs fast. We handle high-volume hiring with precision and speed.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> High-volume hiring</li>
+            <li><i class="fas fa-check"></i> Fast processing</li>
+            <li><i class="fas fa-check"></i> Quality screening</li>
+          </ul>
+          <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="card">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
           <h3>Training & Development</h3>
-          <p>Skill-building programs for job seekers and professionals.</p>
+          <p>Skill-building programs for job seekers and professionals to enhance their career prospects and performance.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Professional courses</li>
+            <li><i class="fas fa-check"></i> Expert trainers</li>
+            <li><i class="fas fa-check"></i> Certification included</li>
+          </ul>
+          <a href="course.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="card">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-globe"></i>
+          </div>
           <h3>Remote Hiring</h3>
-          <p>Access remote opportunities and work from anywhere.</p>
+          <p>Access remote opportunities and work from anywhere. We connect you with global talent and remote positions.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Global talent pool</li>
+            <li><i class="fas fa-check"></i> Remote positions</li>
+            <li><i class="fas fa-check"></i> Flexible work</li>
+          </ul>
+          <a href="jobs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <!-- ✏️ يمكنك إضافة المزيد من الخدمات هنا -->
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Executive Search</h3>
+          <p>Find top-tier leadership talent for your organization. Our executive search service targets the best candidates.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> C-level placements</li>
+            <li><i class="fas fa-check"></i> Confidential process</li>
+            <li><i class="fas fa-check"></i> Industry experts</li>
+          </ul>
+          <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h3>CV & Interview Coaching</h3>
+          <p>Professional CV writing and interview preparation services to help you stand out and land your dream job.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> CV optimization</li>
+            <li><i class="fas fa-check"></i> Mock interviews</li>
+            <li><i class="fas fa-check"></i> Career guidance</li>
+          </ul>
+          <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Employer Branding</h3>
+          <p>Build a strong employer brand to attract and retain top talent. We help you stand out in the competitive market.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Brand strategy</li>
+            <li><i class="fas fa-check"></i> Talent attraction</li>
+            <li><i class="fas fa-check"></i> Employee engagement</li>
+          </ul>
+          <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section animate-fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>How We <span class="highlight">Work</span></h2>
+        <p>A streamlined process designed for your success</p>
+      </div>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4>Consultation</h4>
+          <p>We understand your needs and requirements in depth.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h4>Sourcing</h4>
+          <p>We find the best talent through our extensive network.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <i class="fas fa-filter"></i>
+          </div>
+          <h4>Screening</h4>
+          <p>We evaluate candidates thoroughly to ensure the perfect match.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h4>Placement</h4>
+          <p>We facilitate smooth hiring and onboarding processes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section animate-fade-in">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="500">0</div>
+          <p>Placements Made</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="200">0</div>
+          <p>Companies Served</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="98">0</div>
+          <p>Success Rate (%)</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="1000">0</div>
+          <p>Professionals Trained</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section animate-fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our <span class="highlight">Clients Say</span></h2>
+        <p>Real feedback from people we've helped</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"HubHire's mass recruitment service helped us hire 50+ employees in just two weeks. Outstanding efficiency and quality!"</p>
+          <div class="testimonial-author">
+            <div>
+              <h4>Ahmed Hassan</h4>
+              <span>HR Director, TechCorp</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The training programs at HubHire transformed our team's skills. Highly recommended for professional development."</p>
+          <div class="testimonial-author">
+            <div>
+              <h4>Sarah Johnson</h4>
+              <span>Training Manager, EduTech</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Thanks to HubHire, I found my dream remote job with an international company. The process was smooth and professional."</p>
+          <div class="testimonial-author">
+            <div>
+              <h4>Mohamed Ali</h4>
+              <span>Software Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section animate-fade-in">
+    <div class="container cta-container">
+      <h2>Ready to Find Your <span class="highlight">Perfect Role</span>?</h2>
+      <p>Let us help you take the next step in your career journey</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="cta-btn primary">Get Started <i class="fas fa-arrow-right"></i></a>
+        <a href="jobs.html" class="cta-btn secondary">Browse Jobs <i class="fas fa-briefcase"></i></a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Mosla Pioneers. All rights reserved.</p>
+    <div class="container footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HubHire</h3>
+          <p>Your gateway to a better career, powered by Mosla Pioneers.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+            <li><i class="fas fa-phone"></i> +20 123 456 789</li>
+            <li><i class="fas fa-envelope"></i> info@hubhire.com</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get job alerts</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mosla Pioneers. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

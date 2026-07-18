@@ -1,178 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Course Details & Reviews</title>
-<style>
-  body {
-    background: #f4f6fc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
-
-  .course-details {
-    max-width: 900px;
-    background: white;
-    padding: 30px 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-    margin-bottom: 50px;
-    color: #1c64f2;
-  }
-
-  .course-details h2 {
-    margin-top: 0;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-
-  .course-details p, .course-details ul {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-  }
-
-  .course-details ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 15px;
-  }
-
-  .reviews-slider {
-    width: 100%;
-    max-width: 900px;
-    overflow: hidden;
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  }
-
-  .reviews-track {
-    display: flex;
-    gap: 40px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    cursor: grab;
-    padding: 20px;
-    user-select: none;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-  }
-
-  .reviews-track.active {
-    cursor: grabbing;
-  }
-
-  .review-img {
-    width: 280px;
-    height: 200px;
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(28, 100, 242, 0.3);
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-  }
-
-  .review-img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Responsive */
-  @media (max-width: 700px) {
-    body {
-      margin: 20px 10px;
-    }
-    .course-details, .reviews-slider {
-      max-width: 100%;
-      padding: 20px;
-    }
-    .review-img {
-      width: 220px;
-      height: 150px;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course | HubHire</title>
+  <link rel="stylesheet" href="course.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
-  <section class="course-details" aria-label="Course Details">
-    <h2>Course Details</h2>
-    <p>
-      This course is designed to equip trainees with the latest recruitment strategies and effective human resource management techniques. Throughout the program, you will learn how to conduct successful interviews, understand the job market, and use modern recruitment tools.
-    </p>
-    <p><strong>Course Features:</strong></p>
-    <ul>
-      <li>Practical and hands-on lessons with real case studies.</li>
-      <li>Training on using electronic recruitment platforms.</li>
-      <li>Direct support from HR experts.</li>
-      <li>Certification upon successful completion.</li>
-    </ul>
-  </section>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Mosla Pioneers Logo" class="logo-img" />
+        <span>HubHire</span>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="course.html" class="active">Course</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <section class="reviews-slider" aria-label="Course Reviews">
-    <div class="reviews-track">
-      <img src="review.jpeg" alt="Review 1" class="review-img" />
-      <img src="review2.jpeg" alt="Review 2" class="review-img" />
-      <img src="review.jpeg" alt="Review 3" class="review-img" />
-      <img src="review2.jpeg" alt="Review 4" class="review-img" />
+  <!-- Course Hero Section -->
+  <section class="course-hero animate-fade-in">
+    <div class="container">
+      <div class="course-hero-content">
+        <span class="course-badge"><i class="fas fa-graduation-cap"></i> Premium Course</span>
+        <h1>HR & Recruitment <span class="highlight">Masterclass</span></h1>
+        <p>Master the art of recruitment and human resource management with our comprehensive training program designed for aspiring HR professionals.</p>
+        <div class="course-meta">
+          <span><i class="fas fa-clock"></i> 8 Weeks</span>
+          <span><i class="fas fa-users"></i> 500+ Enrolled</span>
+          <span><i class="fas fa-star"></i> 4.8/5 Rating</span>
+          <span><i class="fas fa-certificate"></i> Certificate Included</span>
+        </div>
+        <a href="#enroll" class="cta-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
   </section>
 
-  <script>
-    const slider = document.querySelector('.reviews-track');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  <!-- Course Details Section -->
+  <section class="course-details-section animate-fade-in">
+    <div class="container">
+      <div class="course-details-grid">
+        <div class="course-details-content">
+          <h2>Course <span class="highlight">Overview</span></h2>
+          <p>
+            This course is designed to equip trainees with the latest recruitment strategies and effective human resource management techniques. Throughout the program, you will learn how to conduct successful interviews, understand the job market, and use modern recruitment tools.
+          </p>
+          
+          <div class="course-features">
+            <h3><i class="fas fa-list-check"></i> Course Features</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Practical and hands-on lessons with real case studies</li>
+              <li><i class="fas fa-check-circle"></i> Training on using electronic recruitment platforms</li>
+              <li><i class="fas fa-check-circle"></i> Direct support from HR experts</li>
+              <li><i class="fas fa-check-circle"></i> Certification upon successful completion</li>
+              <li><i class="fas fa-check-circle"></i> Access to exclusive job placement network</li>
+              <li><i class="fas fa-check-circle"></i> Lifetime access to course materials</li>
+            </ul>
+          </div>
 
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
+          <div class="course-curriculum">
+            <h3><i class="fas fa-book-open"></i> What You'll Learn</h3>
+            <div class="curriculum-grid">
+              <div class="curriculum-item">
+                <span class="module-number">01</span>
+                <div>
+                  <h4>Recruitment Fundamentals</h4>
+                  <p>Understanding the recruitment lifecycle and best practices</p>
+                </div>
+              </div>
+              <div class="curriculum-item">
+                <span class="module-number">02</span>
+                <div>
+                  <h4>Interview Techniques</h4>
+                  <p>Mastering behavioral and competency-based interviews</p>
+                </div>
+              </div>
+              <div class="curriculum-item">
+                <span class="module-number">03</span>
+                <div>
+                  <h4>Digital Recruitment Tools</h4>
+                  <p>Using AI-powered platforms and social media for hiring</p>
+                </div>
+              </div>
+              <div class="curriculum-item">
+                <span class="module-number">04</span>
+                <div>
+                  <h4>Employer Branding</h4>
+                  <p>Building a strong employer brand to attract top talent</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
+        <div class="course-sidebar">
+          <div class="sidebar-card">
+            <div class="course-price">
+              <span class="old-price">$499</span>
+              <span class="new-price">$299</span>
+              <span class="discount">Save 40%</span>
+            </div>
+            <div class="course-info">
+              <div class="info-item">
+                <i class="fas fa-user-graduate"></i>
+                <span>Beginner to Advanced</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>8 Weeks (40 Hours)</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-language"></i>
+                <span>English & Arabic</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-download"></i>
+                <span>Downloadable Resources</span>
+              </div>
+            </div>
+            <a href="#enroll" class="enroll-btn"><i class="fas fa-shopping-cart"></i> Enroll Now</a>
+            <p class="guarantee"><i class="fas fa-shield-alt"></i> 30-day money-back guarantee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
+  <!-- Reviews Section -->
+  <section class="reviews-section animate-fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>Student <span class="highlight">Reviews</span></h2>
+        <p>What our students say about this course</p>
+      </div>
+      
+      <div class="reviews-slider-wrapper">
+        <div class="reviews-slider" id="reviewsSlider">
+          <div class="reviews-track" id="reviewsTrack">
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">"This course completely transformed my understanding of recruitment. The practical examples and expert insights were invaluable."</p>
+              <div class="review-author">
+                <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=JD" alt="John Doe" />
+                <div>
+                  <h4>John Doe</h4>
+                  <span>HR Coordinator</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">"I landed my dream HR job just two weeks after completing this course. Highly recommended for anyone in recruitment!"</p>
+              <div class="review-author">
+                <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=SM" alt="Sarah Mitchell" />
+                <div>
+                  <h4>Sarah Mitchell</h4>
+                  <span>Talent Acquisition Specialist</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">"The course content is up-to-date and relevant to today's recruitment challenges. The support from instructors was exceptional."</p>
+              <div class="review-author">
+                <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=AK" alt="Ahmed Khaled" />
+                <div>
+                  <h4>Ahmed Khaled</h4>
+                  <span>Recruitment Manager</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">"Excellent course! The modules on digital recruitment tools were particularly useful for my current role."</p>
+              <div class="review-author">
+                <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=LE" alt="Lisa Edwards" />
+                <div>
+                  <h4>Lisa Edwards</h4>
+                  <span>HR Business Partner</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">"The certification helped me advance my career significantly. The course material is comprehensive and well-structured."</p>
+              <div class="review-author">
+                <img src="https://via.placeholder.com/50/1c64f2/ffffff?text=MR" alt="Mohamed Rashed" />
+                <div>
+                  <h4>Mohamed Rashed</h4>
+                  <span>Senior Recruiter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+      </div>
 
-    slider.addEventListener('mousemove', (e) => {
-      if(!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2;
-      slider.scrollLeft = scrollLeft - walk;
-    });
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
 
-    // Touch events for mobile
-    slider.addEventListener('touchstart', (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.touches[0].pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
+  <!-- Enroll Section -->
+  <section class="enroll-section animate-fade-in" id="enroll">
+    <div class="container enroll-container">
+      <div class="enroll-content">
+        <h2>Ready to Start Your <span class="highlight">Journey</span>?</h2>
+        <p>Join thousands of successful HR professionals who started their career with our course</p>
+        <div class="enroll-features">
+          <div class="enroll-feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Lifetime access</span>
+          </div>
+          <div class="enroll-feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Certificate included</span>
+          </div>
+          <div class="enroll-feature">
+            <i class="fas fa-check-circle"></i>
+            <span>30-day money-back</span>
+          </div>
+        </div>
+        <div class="enroll-buttons">
+          <a href="#" class="cta-btn primary">Enroll Now <i class="fas fa-arrow-right"></i></a>
+          <a href="#" class="cta-btn secondary">Download Brochure <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    slider.addEventListener('touchend', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HubHire</h3>
+          <p>Your gateway to a better career, powered by Mosla Pioneers.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+            <li><i class="fas fa-phone"></i> +20 123 456 789</li>
+            <li><i class="fas fa-envelope"></i> info@hubhire.com</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get course updates</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mosla Pioneers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    slider.addEventListener('touchmove', (e) => {
-      if(!isDown) return;
-      const x = e.touches[0].pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2;
-      slider.scrollLeft = scrollLeft - walk;
-    });
-  </script>
-
+  <script src="course.js"></script>
 </body>
 </html>
